@@ -10,8 +10,7 @@ GitBook 是一个基于 Node.js 的命令行工具，支持 Markdown 和 AsciiDo
 > [下载地址: https://nodejs.org/en/download/](https://nodejs.org/en/download/)，如果是下载的非安装包，需要设置Path环境变量
 
 ### 2. 安装gitbook工具
-> npm install -g gitbook-cli
-> 
+> npm install -g gitbook-cli  
 > gitbook -V
 
 ### 3. 安装 Calibre
@@ -27,8 +26,7 @@ GitBook 是一个基于 Node.js 的命令行工具，支持 Markdown 和 AsciiDo
 > * SUMMARY.md —— 笔记的目录结构在这里配置
 
 ### 2. 编辑完成笔记内容后，生成电子版文档
-> gitbook init —— 根据最新笔记内容，重新生成必要的目录
-> 
+> gitbook init —— 根据最新笔记内容，重新生成必要的目录  
 > gitbook pdf ./ ./mybook.pdf —— 生成pdf电子书
 
 当然，还可以生成html格式的电子书
