@@ -3,6 +3,6 @@
 
 > gitbook init —— 在当前目录初始化笔记，如果是在已经存在的笔记上执行此命令，则会根据最新的内容生成所需的目录及文件  
 > gitbook pdf ./ ./LearnNoteBook.pdf —— 将当前目录的笔记生成pdf文件  
-> gitbook build [书籍路径] [输出路径] —— 将当前目录的笔记生成html版
+> gitbook build 书籍路径 输出路径 —— 将当前目录的笔记生成html版
 
 
