@@ -13,6 +13,7 @@
     * [kernel](Linux/kernel/README.md)
         * [SDHC流程分析](Linux/kernel/SDHC流程分析.md)
         * [键盘LED灯消息处理流程](Linux/kernel/键盘LED灯消息处理流程.md)
+        * [Linux自动挂载U盘和SD卡](Linux/kernel/Linux自动挂载U盘和SD卡.md)
     * [Yocto](Linux/Yocto/README.md)
         * [单独编译某个recipe](Linux/Yocto/单独编译某个recipe.md)
         * [自定义能编译出最小系统的Layer](Linux/Yocto/自定义能编译出最小系统的Layer.md)
