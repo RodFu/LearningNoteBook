@@ -2,11 +2,13 @@
 
 ## mdev工具的简单理解
 
-> ​	mdev是busybox中的一个udev管理程序的一个精简版，他也可以实现设备节点的自动创建和设备的自动挂载，只是在实现的过程中有点差异，在发生热插拔时间的时候，mdev是被hotplug直接调用，这时mdev通过环境变量中的 ACTION 和 DEVPATH，来确定此次热插拔事件的动作以及影响了/sys中的那个目录。接着会看看这个目录中是否有“dev”的属性文件，如果有就利用这些信息为这个设备在/dev 下创建设备节点文件。
->
-> ​	mdev扫描/sys/block是为了实现向后兼容)和/sys/class两个目录下的dev属性文件，从该dev 属性文件中获取到设备编号(dev属性文件以"major:minor\n"形式保存设备编号)，并以包含该dev属性文件的目录名称作为设备名 device_name(即包含dev属性文件的目录称为device_name，而/sys/class和device_name之间的那部分目录称为 subsystem。也就是每个dev属性文件所在的路径都可表示为/sys/class/subsystem/device_name/dev)，在 /dev目录下创建相应的设备文件。例如，cat /sys/class/tty/tty0/dev会得到4:0，subsystem为tty,device_name为tty0。
+> mdev是busybox中的一个udev管理程序的一个精简版，他也可以实现设备节点的自动创建和设备的自动挂载，只是在实现的过程中有点差异，在发生热插拔时间的时候，mdev是被hotplug直接调用，这时mdev通过环境变量中的 ACTION 和 DEVPATH，来确定此次热插拔事件的动作以及影响了/sys中的那个目录。接着会看看这个目录中是否有“dev”的属性文件，如果有就利用这些信息为这个设备在/dev 下创建设备节点文件。
 
- 
+
+
+> mdev扫描/sys/block是为了实现向后兼容)和/sys/class两个目录下的dev属性文件，从该dev 属性文件中获取到设备编号(dev属性文件以"major:minor\n"形式保存设备编号)，并以包含该dev属性文件的目录名称作为设备名 device_name(即包含dev属性文件的目录称为device_name，而/sys/class和device_name之间的那部分目录称为 subsystem。也就是每个dev属性文件所在的路径都可表示为/sys/class/subsystem/device_name/dev)，在 /dev目录下创建相应的设备文件。例如，cat /sys/class/tty/tty0/dev会得到4:0，subsystem为tty,device_name为tty0。
+
+
 
 ## 实现方法如下：
 
