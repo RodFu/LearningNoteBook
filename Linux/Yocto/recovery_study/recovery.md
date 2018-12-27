@@ -16,7 +16,22 @@ timestamp 001.001.001
 
 ### 3. 下载md5文件
 
-当需要下载更新包时，首先需要下载md5文件，文件名格式为timestamp.md5，其中timestmp为OTATimeStamp文件中提取的timestamp字段值
+当需要下载更新包时，首先需要下载md5文件，文件名格式为timestamp.md5（xxx.xxx.xxx.md5），其中timestmp为OTATimeStamp文件中提取的timestamp字段值，可使用如下命令生成md5文件：
+
+```bash
+md5sum [file name] > xxx.xxx.xxx.md5
+```
+
+md5文件内容示例：
+
+```bash
+1 c56325fb2a7b561e8447ecc481b65fa8  file_001.tgz
+2 fe512d292882ca345d3ff592e7e6575c  zImage
+3 4e1bd25c1d24d9a58c7beb12fc193f34  imx6dl-vab820.dtb
+4 9efc43e4317b1239977b50ca3755f2dc  imx6q-vab820.dtb
+```
+
+
 
 ### 4. 根据md5文件内容下载更新包
 
