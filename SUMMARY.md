@@ -18,6 +18,7 @@
         * [单独编译某个recipe](Linux/Yocto/单独编译某个recipe.md)
         * [自定义能编译出最小系统的Layer](Linux/Yocto/自定义能编译出最小系统的Layer.md)
         * [recovery功能研究](Linux/Yocto/recovery_study/recovery.md)
+    * [i2c tool](Linux/i2c_tool/i2ctransfer.md)
 * [MCU](MCU/README.md)
 * [MISC](MISC/README.md)
     * [gitbook安装](MISC/gitbook.md)
